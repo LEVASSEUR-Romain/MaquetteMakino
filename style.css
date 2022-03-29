@@ -1,0 +1,381 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("/font/Raleway-Bold") format("ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navBarHeight: 8vh;
+    --footerheight: 30vh;
+    --footbackground: rgb(52, 69, 71);
+    --nosmenusHeight: 70vh;
+}
+
+body {
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+header {
+    height: var(--navBarHeight);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav span {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+}
+
+header nav span img {
+    height: 45px;
+    width: 75px;
+}
+
+header nav ul {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    height: var(--navBarHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    flex: 1;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hover Li a */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+.principal {
+    height: 90vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.principal img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    animation: animateImg 30s infinite;
+}
+
+@keyframes animateImg {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+
+.principal h1 {
+    font-weight: 700;
+    font-size: 96px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.198);
+    border-radius: 10px;
+}
+
+/* 1/2 page */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu h2 {
+    padding-top: 70px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 120.4%;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 78px;
+    width: 80vw;
+    flex-wrap: wrap;
+    padding-bottom: 167px;
+}
+
+
+.cards {
+    height: 490px;
+    width: 420px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    box-shadow: 2.7px 8px 24px 0px #0000000D;
+}
+
+.cards:hover {
+    box-shadow: 9px 9px 9px 9px #0000000D;
+}
+
+.cards h3 {
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 10px;
+    color: #5F8A4C;
+}
+
+.cards p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120.4%;
+    padding-left: 10px;
+    color: #696767;
+}
+
+.cards a {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    position: absolute;
+    left: 52.14%;
+    right: 9.52%;
+    top: 87.63%;
+    bottom: 4.26%;
+    color: #FFFFFF;
+    background: rgba(217, 128, 81, 0.6);
+    border-radius: 5px;
+    height: 41px;
+    width: 161px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cards a:hover {
+    border-radius: 0px;
+    color: rgba(217, 128, 81, 0.6);
+    background-color: #ffe5e5;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: animatedBackground 5s linear infinite alternate;
+}
+
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.cards img {
+    width: 420px;
+    height: 250px;
+}
+
+
+/* footer */
+footer {
+    height: var(--footerheight);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: var(--footbackground);
+    color: white;
+}
+
+
+.navfooter, .reseau {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navfooter ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.navfooter ul li {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.navfooter ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.logo {
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.logo img {
+    height: 150px;
+    width: 200px;
+}
+
+.reseau ul li, .navfooter ul li {
+    list-style: none;
+}
+
+.reseau ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+
+.reseau a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    gap: 20px;
+    color: #FFFFFF;
+}
+
+.reseau>ul:nth-child(2)>li:nth-child(2)>a:nth-child(1) {
+    gap: 30px;
+}
+
+.youtube:hover {
+    color: red;
+}
+
+.twitch:hover {
+    color: #6441A5;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+}
+
+@media (max-height: 540px) {
+    header nav span {
+        display: none;
+    }
+
+    .principal h1 {
+        font-size: 60px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .copyright {
+        display: none;
+    }
+}
+
+
+@media (max-width: 788px) {
+    header nav span {
+        display: none;
+    }
+
+    .principal h1 {
+        font-size: 60px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .copyright {
+        display: none;
+    }
+}
